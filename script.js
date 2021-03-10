@@ -1,14 +1,10 @@
 let fillbar = document.querySelector(".fill");
-let audios = [
-  "music/Audio_one.mp3",
-  "music/Audio_two.mp3",
-  "music/Audio_three.mp3",
-];
+let audios = ["Audio_one.mp3", "Audio_two.mp3", "Audio_three.mp3"];
 
 let artist = document.querySelector(".artistName");
 let songName = document.querySelector(".songName");
 
-let covers = ["music/cover1.jpg", "music/cover2.jpg", "music/cover3.jpg"];
+let covers = ["cover1.jpg", "cover2.jpg", "cover3.jpg"];
 let names = ["Mozzik", "Clean Bandits & Demi Lovato", "Masked Wolf"];
 let songs = ["VEQNJO", "Solo", "Astrounat In The Ocean"];
 let volumeUp = document.querySelector(".volume-up");
