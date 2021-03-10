@@ -4,7 +4,14 @@ let audios = [
   "/music/Audio_two.mp3",
   "/music/Audio_three.mp3",
 ];
+
+let artist = document.querySelector(".artistName");
+let songName = document.querySelector(".songName");
+
 let covers = ["/music/cover1.jpg", "/music/cover2.jpg", "/music/cover3.jpg"];
+let names = ["Mozzik", "Clean Bandits & Demi Lovato", "Masked Wolf"];
+let songs = ["VEQNJO", "Solo", "Astrounat In The Ocean"];
+let volumeUp = document.querySelector(".volume-up");
 let currentTime = document.querySelector(".time");
 
 let audio = new Audio();
@@ -36,6 +43,10 @@ audio.addEventListener("timeupdate", function () {
   fillbar.style.width = position * 100 + "%";
 
   convertTime(Math.round(audio.currentTime));
+
+  if (audio.ended) {
+    nextAudio();
+  }
 });
 
 function convertTime(seconds) {
@@ -62,7 +73,7 @@ function totalTime(seconds) {
 
 function nextAudio() {
   currentSong++;
-  if (currentSong > audios.length) {
+  if (currentSong > audios.length - 1) {
     currentSong = 0;
   }
   playSong();
@@ -71,6 +82,7 @@ function nextAudio() {
   playBtn.style.paddingLeft = "30px";
 
   $(".img img").attr("src", covers[currentSong]);
+  switchArtist();
 }
 
 function prevAudio() {
@@ -84,4 +96,36 @@ function prevAudio() {
   playBtn.style.paddingLeft = "30px";
 
   $(".img img").attr("src", covers[currentSong]);
+  switchArtist();
+}
+
+function decreseVolume() {
+  audio.volume -= 0.25;
+  if (audio.volume === 0) {
+    audio.volume = 0;
+    document.querySelector(".volume-up").innerHTML =
+      '<i class="fa fa-volume-mute"></i>';
+  }
+}
+function increaseVolume() {
+  audio.volume += 0.25;
+  document.querySelector(".volume-up").innerHTML =
+    '<i class="fa fa-volume-up"></i>';
+}
+
+volumeUp.addEventListener("click", function () {
+  if (audio.volume > 0) {
+    audio.volume = 0;
+    document.querySelector(".volume-up").innerHTML =
+      '<i class="fa fa-volume-mute"></i>';
+  } else {
+    audio.volume = 1;
+    document.querySelector(".volume-up").innerHTML =
+      '<i class="fa fa-volume-up"></i>';
+  }
+});
+
+function switchArtist() {
+  artist.textContent = names[currentSong];
+  songName.textContent = songs[currentSong];
 }

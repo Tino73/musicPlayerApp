@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dark Red Player</title>
+    <title>Song Player</title>
 
     <link
       rel="stylesheet"
@@ -19,7 +19,7 @@
       <div class="container">
         <div class="icons">
           <a href="#"><i class="fa fa-bars"></i></a>
-          <h1>MY MUSIC</h1>
+          <h3>Gym Playlist</h3>
           <a href="#"><i class="fa fa-heart"></i></a>
         </div>
 
@@ -28,8 +28,8 @@
         </div>
 
         <div class="title">
-          <h1>VEQNJO</h1>
-          <p>Mozzik</p>
+          <h1 class="songName">VEQNJO</h1>
+          <p class="artistName">Mozzik</p>
         </div>
 
         <div class="time">
@@ -54,9 +54,11 @@
         <div class="repeat-btns">
           <a href="#"><i class="fa fa-retweet"></i></a>
           <span>
-            <button class="decrease">-</button>
-            <a href="#" class="volume-up"><i class="fa fa-volume-up"></i></a>
-            <button class="increase">+</button>
+            <button class="decrease" onclick="decreseVolume()">-</button>
+            <a href="#" class="volume-up" onclick="mute()"
+              ><i class="fa fa-volume-up"></i
+            ></a>
+            <button class="increase" onclick="increaseVolume()">+</button>
           </span>
           <a href="#"><i class="fa fa-random"></i></a>
         </div>

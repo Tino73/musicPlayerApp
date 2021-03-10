@@ -15,14 +15,14 @@ img {
 }
 
 .player {
-  background: #000;
+  background: #464e7e;
   width: 450px;
   height: 730px;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  color: #ff012f;
+  color: #0d1725;
   border-radius: 5px;
   box-shadow: 1px 1px 30px #111, -1px -1px 30px #111;
   overflow: hidden;
@@ -42,7 +42,7 @@ img {
 }
 
 .icons a {
-  color: #ff012f;
+  color: #ed2224;
   font-size: 1.2em;
   transition: all 0.3s;
 }
@@ -52,7 +52,7 @@ img {
 }
 
 .img {
-  box-shadow: 1px 1px 15px #ff012f, -1px -1px 15px #ff012f;
+  box-shadow: 1px 1px 15px #ed2224, -1px -1px 15px #ed2224;
   width: 60%;
   border-radius: 50%;
   margin: 30px auto;
@@ -80,7 +80,7 @@ img {
 }
 
 .title p {
-  color: #fff;
+  color: rgb(209, 206, 206);
   font-size: 1.1em;
 }
 
@@ -92,7 +92,7 @@ img {
 .seek {
   width: 100%;
   height: 5px;
-  background: #ff012f;
+  background: #ed2224;
   border-radius: 50px;
 }
 
@@ -104,7 +104,7 @@ img {
 }
 
 .audio-btns {
-  background: #ff012f;
+  background: #0d1725;
   margin: 40px auto;
   height: 350px;
   width: 100%;
@@ -128,7 +128,7 @@ img {
 }
 
 .play-btns .play-pause {
-  background: #ff0634;
+  background: #464e7e;
   padding: 30px 30px 30px 33px;
   border-radius: 50%;
   box-shadow: 1px 1px 50px #111;
@@ -150,7 +150,7 @@ img {
   border: none;
   font-size: 1.3rem;
   font-weight: bold;
-  color: #ff012f;
+  color: #0d1725;
   border-radius: 50%;
   cursor: pointer;
   outline: none;
@@ -158,6 +158,6 @@ img {
 }
 
 .repeat-btns button:hover {
-  background: #ff0634;
+  background: #1c2c42;
   color: #fff;
 }
