@@ -126,7 +126,6 @@
 body {
   font-family: monospace;
   background: linear-gradient(120deg, #130f40, #4834d4, #8344ad);
-  height: 100vh;
   font-size: 17px;
 }
 
@@ -137,11 +136,8 @@ img {
 .player {
   background: #464e7e;
   width: 412px;
-  height: 846px;
+  height: 720px;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   color: #0d1725;
   border-radius: 5px;
   box-shadow: 1px 1px 30px #111, -1px -1px 30px #111;
